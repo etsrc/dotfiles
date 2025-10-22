@@ -1,4 +1,4 @@
-# devenv
+# dotfiles
 Tools and settings for personal development environment
 
 ## Tools Installation
@@ -16,7 +16,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 1. Adjust `ZSH_CONFIG_DIR` in `.zshrc`
 
 ```shell
-ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/devenv"
+ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/dotfiles"
 ```
 
 2. Copy .zshrc into users home folder
