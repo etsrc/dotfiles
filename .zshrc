@@ -1,4 +1,4 @@
-export ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/devenv"
+export ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/dotfiles"
 
 if [ -f "$ZSH_CONFIG_DIR/init.zsh" ]; then source "$ZSH_CONFIG_DIR/init.zsh"; fi
 if [ -f "$ZSH_CONFIG_DIR/exports.zsh" ]; then source "$ZSH_CONFIG_DIR/exports.zsh"; fi
