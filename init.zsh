@@ -60,3 +60,9 @@ setopt HIST_IGNORE_SPACE
 PROMPT="%{$fg_bold[yellow]%}%n@%{$reset_color%}%{$fg_bold[yellow]%}%m %{$reset_color%}%{$fg_bold[cyan]%}%d%{$reset_color%}"
 PROMPT+=' $(git_prompt_info)
 %(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) '
+
+
+# NVM INIT
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
