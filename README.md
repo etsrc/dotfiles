@@ -3,7 +3,7 @@ Tools and settings for personal development environment
 
 ## Required Tools
 ```shell
-sudo apt-get update && sudo apt-get install zsh git
+sudo apt-get update && sudo apt-get install zsh git tmux qrencode
 
 chsh -s $(which zsh)
 
@@ -30,4 +30,3 @@ ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/dotfiles"
 4. Create `private.zsh` for secrets if required
 
 5. `source .zshrc` or restart terminal
-

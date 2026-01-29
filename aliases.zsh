@@ -1,19 +1,56 @@
-# Alias Ideas
-# command ls # ignore alias
-# alias reload='source ~/.zshrc'  # Reload Zsh config
-# alias c='clear'  # Clear terminal
-# alias vim='nvim'  # Use Neovim instead of Vim
+# Ignore Alias: 
+# \ll
+# command ll
+
+# Copy Recursive:
+# cp -R source_directory target_directory
+
+# Navigate
+alias ll='la -lah'
+alias lt='la -laht'
+alias lu='du -sh * | sort -hr' 
+alias h='history -100'
+alias hg='history | grep $1'
+alias c='clear'
+
+# Tools
+alias docker=podman
+alias tar='tar -czvf $1'
+alias untar='tar -zxvf $1'
+alias qr='qrencode -t ANSIUTF8 $1'
+
+# System
+alias reload='source ~/.zshrc'
+alias path="echo $PATH | tr ':' '\n'"
+
+# Packages
+alias apru="sudo apt update && sudo apt upgrade -y"
+alias aptc='sudo apt autoclean && sudo apt autoremove'
+alias apti='sudo apt install $1'
+alias aptr='sudo apt remove $1'
+
+# Tmux
+# tmux ls
+# tmux a
+# tmux attach -t 4
+# tmux new -s myname
+# tmux new -s myname -d
+# tmux kill-session -t myname
+# tmux kill-server
 # alias t='tmux new-session -A -s main'  # Start/attach to tmux session
-# alias yep='sudo apt install $1'
-# alias nop='sudo apt remove $1'
-# clear apt cache
-# alias h='history'  
-# alias hg='history | grep $1'
-# alias sup="sudo apt update && sudo apt upgrade -y"
-# alias lu='du -sh * | sort -h' 
-# alias lt='ls -t -1 -long'
-# alias tar='tar -czvf $1'
-# alias untar='tar -zxvf $1' 
-# Commands: cp -R source_directory target_directory
-# View PATH line by line: echo $PATH | tr ':' '\n'
+# tmux new -s project2 -d && tmux switch-client -t project2
+# exit to kill a single session
+# Switch session: Ctrl+b then s
+# Kill session: Ctrl+b then x
+# Detach session: Ctrl+b then d
+# Split Vertical: Ctrl+b then %
+# Split Horizontal: Ctrl+b then "
+# Save environment: Prefix + Ctrl+s
+# Restore environment: Prefix + Ctrl+r
+# Tmux Resurrect plugin
+
+# Go
+# go get -tool github.com/golangci/golangci-lint/cmd/golangci-lint
+# go test ./... 
+# go mod tidy
 
