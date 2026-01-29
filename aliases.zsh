@@ -30,27 +30,18 @@ alias apti='sudo apt install $1'
 alias aptr='sudo apt remove $1'
 
 # Tmux
-# tmux ls
-# tmux a
-# tmux attach -t 4
-# tmux new -s myname
+alias t='tmux new-session -A -s main -n main'
+alias ta='tmux new-session -s'
+alias tl='tmux list-sessions'
+alias tw='tmux new-window -n'
+alias tk='tmux kill-session -t'
+
+# tmux attach -t myname
 # tmux new -s myname -d
-# tmux kill-session -t myname
 # tmux kill-server
-# alias t='tmux new-session -A -s main'  # Start/attach to tmux session
-# tmux new -s project2 -d && tmux switch-client -t project2
-# exit to kill a single session
-# Switch session: Ctrl+b then s
-# Kill session: Ctrl+b then x
-# Detach session: Ctrl+b then d
-# Split Vertical: Ctrl+b then %
-# Split Horizontal: Ctrl+b then "
-# Save environment: Prefix + Ctrl+s
-# Restore environment: Prefix + Ctrl+r
-# Tmux Resurrect plugin
+# tmux new -s myname -d && tmux switch-client -t myname
 
 # Go
 # go get -tool github.com/golangci/golangci-lint/cmd/golangci-lint
 # go test ./... 
 # go mod tidy
-

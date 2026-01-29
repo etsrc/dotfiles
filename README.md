@@ -30,3 +30,46 @@ ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/dotfiles"
 4. Create `private.zsh` for secrets if required
 
 5. `source .zshrc` or restart terminal
+
+
+## Tmux
+### Session Management
+| Action | Command |
+|--------|---------|
+| Exit/kill single session | `exit` |
+| Switch session | `Ctrl+b` → `s` |
+| Kill session | `Ctrl+b` → `x` |
+| Detach session | `Ctrl+b` → `d` |
+
+### Pane Management
+| Action | Command |
+|--------|---------|
+| Split vertical | `Ctrl+b` → `%` |
+| Split horizontal | `Ctrl+b` → `"` |
+
+### Window Management
+| Action | Command |
+|--------|---------|
+| Create new window | `Ctrl+b` → `c` |
+| Rename current window | `Ctrl+b` → `,` |
+| Kill current window | `Ctrl+b` → `&` |
+| Next window | `Ctrl+b` → `n` |
+| Previous window | `Ctrl+b` → `p` |
+| Jump to window 0-9 | `Ctrl+b` → `0-9` |
+| List all windows | `Ctrl+b` → `w` |
+| Toggle to last window | `Ctrl+b` → `l` |
+| Find window by name | `Ctrl+b` → `f` |
+
+### Tmux Resurrect Plugin
+| Action | Command |
+|--------|---------|
+| Save environment | `Prefix` → `Ctrl+s` |
+| Restore environment | `Prefix` → `Ctrl+r` |
+
+
+## fzf Key Bindings
+| Key | Action |
+|-----|--------|
+| `Ctrl+T` | Paste selected files/directories |
+| `Ctrl+R` | Paste command from history |
+| `Alt+C` | cd into selected directory |
