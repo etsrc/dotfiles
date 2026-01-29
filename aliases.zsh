@@ -24,7 +24,7 @@ alias reload='source ~/.zshrc'
 alias path="echo $PATH | tr ':' '\n'"
 
 # Packages
-alias apru="sudo apt update && sudo apt upgrade -y"
+alias aptu="sudo apt update && sudo apt upgrade -y"
 alias aptc='sudo apt autoclean && sudo apt autoremove'
 alias apti='sudo apt install $1'
 alias aptr='sudo apt remove $1'
