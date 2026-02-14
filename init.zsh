@@ -58,9 +58,9 @@ setopt HIST_IGNORE_SPACE
 
 
 # SET THE PROMPT
-PROMPT="%{$fg_bold[yellow]%}%n@%{$reset_color%}%{$fg_bold[yellow]%}%m %{$reset_color%}%{$fg_bold[cyan]%}%d%{$reset_color%}"
-PROMPT+=' $(git_prompt_info)
-%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) '
+# PROMPT="%{$fg_bold[yellow]%}%n@%{$reset_color%}%{$fg_bold[yellow]%}%m %{$reset_color%}%{$fg_bold[cyan]%}%d%{$reset_color%}"
+# PROMPT+=' $(git_prompt_info)
+# %(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) '
 
 
 # NVM INIT
@@ -73,3 +73,25 @@ export NVM_DIR="$HOME/.nvm"
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
+
+# Starship
+eval "$(starship init zsh)"
+
+# TMUX
+
+## ~/.tmux.conf with set -g mouse on
+
+# if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#     tmux has-session -t main 2>/dev/null
+
+#     if [ $? != 0 ]; then
+#         tmux new-session -d -s main -n 'main'
+#         tmux split-window -h -t main:0
+#         tmux split-window -v -t main:0.1
+#         tmux resize-pane -t main:0.0 -x 67%
+#         tmux select-pane -t main:0.0
+#     fi
+
+#     # Attach to the session
+#     exec tmux attach-session -t main
+# fi

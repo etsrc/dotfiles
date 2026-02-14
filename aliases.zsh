@@ -18,6 +18,7 @@ alias docker=podman
 alias tar='tar -czvf $1'
 alias untar='tar -zxvf $1'
 alias qr='qrencode -t ANSIUTF8 $1'
+alias bat="batcat"
 
 # System
 alias reload='source ~/.zshrc'
@@ -34,7 +35,7 @@ alias t='tmux new-session -A -s main -n main'
 alias ta='tmux new-session -s'
 alias tl='tmux list-sessions'
 alias tw='tmux new-window -n'
-alias tk='tmux kill-session -t'
+alias tk='tmux kill-session -t main'
 
 # tmux attach -t myname
 # tmux new -s myname -d
@@ -45,3 +46,6 @@ alias tk='tmux kill-session -t'
 # go get -tool github.com/golangci/golangci-lint/cmd/golangci-lint
 # go test ./... 
 # go mod tidy
+
+# other
+# lft, dig, ping, traceroute
