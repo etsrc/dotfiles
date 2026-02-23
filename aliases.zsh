@@ -18,7 +18,7 @@ alias docker=podman
 alias tar='tar -czvf $1'
 alias untar='tar -zxvf $1'
 alias qr='qrencode -t ANSIUTF8 $1'
-alias bat="batcat"
+# alias bat="batcat"
 
 # System
 alias reload='source ~/.zshrc'
@@ -36,6 +36,9 @@ alias ta='tmux new-session -s'
 alias tl='tmux list-sessions'
 alias tw='tmux new-window -n'
 alias tk='tmux kill-session -t main'
+
+# Custom
+alias ктоя='whoami'
 
 # tmux attach -t myname
 # tmux new -s myname -d

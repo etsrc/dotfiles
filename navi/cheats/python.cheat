@@ -1,0 +1,40 @@
+% python, py, uv, venv
+
+# Run a tool in a temporary environment (e.g., cowsay)
+uvx cowsay <message>
+
+# Install a tool globally to your machine
+uv tool install <tool_name>
+
+# Create a new virtual environment with a specific version
+uv venv --python <version>
+
+# Sync the project (installs all dependencies from lockfile)
+uv sync
+
+# Pin the project to a specific Python version
+uv python pin <version>
+
+# Download and install a specific Python version
+uv python install <version>
+
+# Initialize a new Python project
+uv init --python <version>
+
+# Add a package to the current project
+uv add <package_name>
+
+# Add ipykernel to the project (for Jupyter)
+uv add ipykernel
+
+# Run Jupyter Notebook with ipykernel in a temp environment
+uvx --with ipykernel jupyter notebook
+
+# Register a new Jupyter kernel for the current project
+uv run python -m ipykernel install --user --name=<kernel_name>
+
+# Run Jupyter with specific core and kernel requirements
+uvx --from jupyter-core --with ipykernel jupyter notebook
+
+$ version: echo "3.13 3.12 3.11" | tr ' ' '\n'
+$ message: echo '"Hello World" "Hi"' | tr ' ' '\n'

@@ -5,6 +5,9 @@ Tools and settings for personal development environment
 ```shell
 sudo apt-get update && sudo apt-get install zsh git tmux qrencode bat tree
 
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+
 ## Alacritty
 ## https://github.com/alacritty/alacritty/blob/master/INSTALL.md
 git clone https://github.com/alacritty/alacritty.git
@@ -43,6 +46,18 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.25.7.linux-amd64.ta
 
 ## Install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
+## Navi
+cargo install --locked navi
+
+# Create the parent directory if it doesn't exist
+mkdir -p ~/.local/share/navi
+ln -s ~/Projects/dotfiles/navi/cheats ~/.local/share/navi/cheats
+
+# Create the config directory
+mkdir -p ~/.config/navi
+ln -s ~/Projects/dotfiles/navi/config.yaml ~/.config/navi/config.yaml
+
 ```
 
 ## Setup
@@ -108,7 +123,7 @@ ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/dotfiles"
 - Neovim Configuration. LazyVim or Kickstart.nvim
 - lazygit / lazy docker
 - zoxide
-- .tmux.conf with tpm, resurrect/continuum
+- .tmux.conf with tpm, resurrect/continuum, vim keys, start with 1, change tabs to top, add mouse support
 - batcat, ls -> eza, 
 - grep -> rg
 - Atuin, SQLite-backed database
@@ -116,3 +131,4 @@ ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/dotfiles"
 - stow
 - just
 - fzf-tab
+- jq

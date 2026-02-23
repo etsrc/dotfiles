@@ -1,0 +1,13 @@
+style:
+  tag:
+    width_percentage: 20
+    min_width: 20
+  comment:
+    width_percentage: 20
+    min_width: 20
+  snippet:
+    width_percentage: 60
+    min_width: 60
+
+shell:
+  command: zsh
