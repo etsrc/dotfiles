@@ -1,0 +1,4 @@
+% new
+
+# Print the shell
+echo $SHELL

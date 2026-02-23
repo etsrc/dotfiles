@@ -24,7 +24,7 @@ echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc
 cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty
 
 mkdir -p ~/.config/alacritty/themes
-ln -sf ~/Projects/dotfiles/alacritty.toml ~/.config/alacritty/alacritty.toml
+ln -s ~/Projects/dotfiles/alacritty ~/.config
 
 curl -L -o ~/.config/alacritty/themes/catppuccin-mocha.toml https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
 
@@ -57,7 +57,6 @@ ln -s ~/Projects/dotfiles/navi/cheats ~/.local/share/navi/cheats
 # Create the config directory
 mkdir -p ~/.config/navi
 ln -s ~/Projects/dotfiles/navi/config.yaml ~/.config/navi/config.yaml
-
 ```
 
 ## Setup

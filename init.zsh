@@ -76,6 +76,7 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 # Starship
 eval "$(starship init zsh)"
+eval "$(navi widget zsh)"
 
 # TMUX
 
