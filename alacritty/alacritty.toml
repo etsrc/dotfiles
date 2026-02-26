@@ -18,7 +18,8 @@ size = 13.0
 builtin_box_drawing = true
 
 [cursor]
-style = { shape = "Beam", blinking = "On" }
+# style = { shape = "Beam", blinking = "On" }
+style = { shape = "Block", blinking = "On" }
 # vi_mode_cursor = { shape = "Block" }
 
 [mouse]

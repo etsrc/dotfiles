@@ -77,22 +77,3 @@ complete -C '/usr/local/bin/aws_completer' aws
 # Starship
 eval "$(starship init zsh)"
 eval "$(navi widget zsh)"
-
-# TMUX
-
-## ~/.tmux.conf with set -g mouse on
-
-# if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-#     tmux has-session -t main 2>/dev/null
-
-#     if [ $? != 0 ]; then
-#         tmux new-session -d -s main -n 'main'
-#         tmux split-window -h -t main:0
-#         tmux split-window -v -t main:0.1
-#         tmux resize-pane -t main:0.0 -x 67%
-#         tmux select-pane -t main:0.0
-#     fi
-
-#     # Attach to the session
-#     exec tmux attach-session -t main
-# fi

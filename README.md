@@ -5,28 +5,24 @@ Tools and settings for personal development environment
 ```shell
 sudo apt-get update && sudo apt-get install zsh git tmux qrencode bat tree
 
-mkdir -p ~/.local/bin
-ln -s /usr/bin/batcat ~/.local/bin/bat
+## Go
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.25.7.linux-amd64.tar.gz
 
-## Alacritty
-## https://github.com/alacritty/alacritty/blob/master/INSTALL.md
-git clone https://github.com/alacritty/alacritty.git
-cd alacritty
-
+## Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-rustup override set stable
-rustup update stable
 
-sudo apt install cmake g++ pkg-config libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+## NVM
+## https://github.com/nvm-sh/nvm
 
-mkdir -p ${ZDOTDIR:-~}/.zsh_functions
-echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc
-cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty
+## uv (python)
+cargo install --locked uv
 
-mkdir -p ~/.config/alacritty/themes
-ln -s ~/Projects/dotfiles/alacritty ~/.config
+## Navi
+cargo install --locked navi
 
-curl -L -o ~/.config/alacritty/themes/catppuccin-mocha.toml https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+## fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
 
 ## Zsh Setup
 chsh -s $(which zsh)
@@ -39,40 +35,48 @@ git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTO
 
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
-## Install Go (change version)
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.25.7.linux-amd64.tar.gz
+## Alacritty
+git clone https://github.com/alacritty/alacritty.git && cd alacritty
 
-## Install uv
-curl -LsSf https://astral.sh/uv/install.sh | sh
+rustup override set stable
+rustup update stable
 
-## Navi
-cargo install --locked navi
+sudo apt install cmake g++ pkg-config libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 
-# Create the parent directory if it doesn't exist
-mkdir -p ~/.local/share/navi
-ln -s ~/Projects/dotfiles/navi/cheats ~/.local/share/navi/cheats
+mkdir -p ${ZDOTDIR:-~}/.zsh_functions
+echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc
+cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty
 
-# Create the config directory
-mkdir -p ~/.config/navi
-ln -s ~/Projects/dotfiles/navi/config.yaml ~/.config/navi/config.yaml
 ```
 
 ## Setup
 1. Install Required Tools
 
-2. Adjust `ZSH_CONFIG_DIR` in `.zshrc`
+2. Create Required Symlinks
 
 ```shell
-ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/dotfiles"
+## Symlinks
+ln -s ~/Projects/dotfiles/.zshrc ~/.zshrc
+
+mkdir -p ~/.local/share/navi
+ln -s ~/Projects/dotfiles/navi/cheats ~/.local/share/navi/cheats
+
+mkdir -p ~/.config/navi
+ln -s ~/Projects/dotfiles/navi/config.yaml ~/.config/navi/config.yaml
+
+ln -s ~/Projects/dotfiles/tmux ~/.config
+
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
+
+mkdir -p ~/.config/alacritty/themes
+ln -s ~/Projects/dotfiles/alacritty ~/.config
 ```
 
-3. Copy .zshrc into users home folder
+3. Create `private.zsh` for secrets if required
 
-4. Create `private.zsh` for secrets if required
-
-5. `source .zshrc` or restart terminal
+4. `source .zshrc` or restart terminal
 
 
 ## Tmux
@@ -109,6 +113,23 @@ ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/dotfiles"
 | Save environment | `Prefix` → `Ctrl+s` |
 | Restore environment | `Prefix` → `Ctrl+r` |
 
+### Init
+
+```shell
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux has-session -t main 2>/dev/null
+    if [ $? != 0 ]; then
+        tmux new-session -d -s main -n 'main'
+        tmux split-window -h -t main:0
+        tmux split-window -v -t main:0.1
+        tmux resize-pane -t main:0.0 -x 67%
+        tmux select-pane -t main:0.0
+    fi
+    # Attach to the session
+    exec tmux attach-session -t main
+fi
+```
+
 
 ## fzf Key Bindings
 | Key | Action |
@@ -120,6 +141,7 @@ ZSH_CONFIG_DIR="$HOME/{PathToThisFolder}/dotfiles"
 
 ## TODO:
 - Neovim Configuration. LazyVim or Kickstart.nvim
+- explore copy mode
 - lazygit / lazy docker
 - zoxide
 - .tmux.conf with tpm, resurrect/continuum, vim keys, start with 1, change tabs to top, add mouse support
