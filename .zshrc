@@ -6,4 +6,5 @@ if [ -f "$ZSH_CONFIG_DIR/aliases.zsh" ]; then source "$ZSH_CONFIG_DIR/aliases.zs
 if [ -f "$ZSH_CONFIG_DIR/functions.zsh" ]; then source "$ZSH_CONFIG_DIR/functions.zsh"; fi
 if [ -f "$ZSH_CONFIG_DIR/git.zsh" ]; then source "$ZSH_CONFIG_DIR/git.zsh"; fi
 if [ -f "$ZSH_CONFIG_DIR/private.zsh" ]; then source "$ZSH_CONFIG_DIR/private.zsh"; fi
+
 fpath+=${ZDOTDIR:-~}/.zsh_functions

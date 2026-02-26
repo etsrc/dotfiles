@@ -6,21 +6,12 @@ plugins=(
     fzf
     zsh-autosuggestions
     zsh-syntax-highlighting
-    # aws
-    # docker
-    # golang
-    # httpie
-    # node
-    # npm
-    # the-fuck
-    # aliases
-    # brew
 )
 # zstyle ':omz:*' aliases no
 zstyle ':omz:plugins:git' aliases no
 
 
-# FZF: Ctrl+T (file search), Ctrl+R (history search), and Alt+C (directory change)
+# FZF
 export FZF_BASE=~/.fzf
 # export FZF_DEFAULT_COMMAND='<your fzf default command>'
 # DISABLE_FZF_AUTO_COMPLETION="true"

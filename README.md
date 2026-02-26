@@ -12,7 +12,7 @@ sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.25.7.linux-amd64.ta
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ## NVM
-## https://github.com/nvm-sh/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
 ## uv (python)
 cargo install --locked uv
@@ -20,8 +20,16 @@ cargo install --locked uv
 ## Navi
 cargo install --locked navi
 
+## Rip Grep (reduce bin size)
+cargo install --locked ripgrep && strip ~/.cargo/bin/rg
+
 ## fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
+## jq (https://github.com/jqlang/jq/releases)
+
+## Steampipe
+sudo /bin/sh -c "$(curl -fsSL https://steampipe.io/install/steampipe.sh)"
 
 
 ## Zsh Setup
@@ -141,15 +149,12 @@ fi
 
 ## TODO:
 - Neovim Configuration. LazyVim or Kickstart.nvim
-- explore copy mode
+- explore copy mode alacritty/tmux
 - lazygit / lazy docker
 - zoxide
-- .tmux.conf with tpm, resurrect/continuum, vim keys, start with 1, change tabs to top, add mouse support
-- batcat, ls -> eza, 
-- grep -> rg
+- .tmux.conf with tpm, resurrect/continuum, vim keys
+- ls -> eza
 - Atuin, SQLite-backed database
-- direnv
-- stow
-- just
+- direnv, stow, just
 - fzf-tab
-- jq
+- the-f*ck, httpie, podman
