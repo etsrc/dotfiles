@@ -3,7 +3,7 @@ Tools and settings for personal development environment
 
 ## Required Tools
 ```shell
-sudo apt-get update && sudo apt-get install zsh git tmux qrencode bat tree
+sudo apt-get update && sudo apt-get install zsh git tmux qrencode bat tree 
 
 ## Go
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.25.7.linux-amd64.tar.gz
@@ -31,6 +31,16 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 ## Steampipe
 sudo /bin/sh -c "$(curl -fsSL https://steampipe.io/install/steampipe.sh)"
 
+## LazyVim (https://www.lazyvim.org/)
+sudo apt-get update && sudo apt-get install fd-find
+ln -s $(which fdfind) ~/.local/bin/fd
+cargo install --locked tree-sitter-cli
+
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+
+# cc compiler
 
 ## Zsh Setup
 chsh -s $(which zsh)
@@ -148,13 +158,17 @@ fi
 
 
 ## TODO:
+- Nerd Font
 - Neovim Configuration. LazyVim or Kickstart.nvim
 - explore copy mode alacritty/tmux
 - lazygit / lazy docker
-- zoxide
+- zoxide, yazi
 - .tmux.conf with tpm, resurrect/continuum, vim keys
 - ls -> eza
 - Atuin, SQLite-backed database
 - direnv, stow, just
 - fzf-tab
 - the-f*ck, httpie, podman
+- tmux-fzf
+- zellij
+- change wrong commnd

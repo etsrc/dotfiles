@@ -15,8 +15,8 @@ alias c='clear'
 
 # Tools
 alias docker=podman
-alias tar='tar -czvf $1'
-alias untar='tar -zxvf $1'
+# alias tar='tar -czvf $1'
+# alias untar='tar -zxvf $1'
 alias qr='qrencode -t ANSIUTF8 $1'
 # alias bat="batcat"
 

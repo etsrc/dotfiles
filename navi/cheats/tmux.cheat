@@ -1,0 +1,11 @@
+% tmux
+
+# Kill the current session you are attached to
+tmux kill-session
+
+# Kill a specific session by nam
+tmux kill-session -t <session>
+
+# Kill every single session
+tmux kill-server
+
