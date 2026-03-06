@@ -5,6 +5,7 @@ alias gc='git commit -m'
 alias gu='git pull'
 alias gp='git push'
 alias gl='git log --oneline'
+alias gr='git reset --hard HEAD'
 
 # fuzzy branch change
 gfb() {

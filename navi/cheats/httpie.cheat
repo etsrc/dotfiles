@@ -1,0 +1,33 @@
+% httpie, http
+
+# GET request
+http GET <url>
+
+# POST request with JSON
+http POST <url> <key>=<value>
+
+# Bearer token auth
+http -A bearer -a <token> GET <url>
+
+# Basic auth
+http -a <user>:<password> GET <url>
+
+# Set a header
+http GET <url> <header>:<value>
+
+$ header: echo -e 'Authorization\nContent-Type\nAccept'
+
+# Query parameter
+http GET <url> <param>==<value>
+
+# Upload a file
+http --form POST <url> file@<filepath>
+
+# Download a file
+http --download GET <url>
+
+# Ignore SSL errors
+http --verify=no GET <url>
+
+# Verbose (show request + response)
+http --verbose GET <url>

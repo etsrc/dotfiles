@@ -9,3 +9,5 @@ tmux kill-session -t <session>
 # Kill every single session
 tmux kill-server
 
+# Start new Session
+tmux new-session -t <session_name>

@@ -172,3 +172,6 @@ fi
 - tmux-fzf
 - zellij
 - change wrong commnd
+- window management
+- ansible install
+- manage often visited locations

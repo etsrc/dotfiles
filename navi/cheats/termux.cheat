@@ -1,0 +1,25 @@
+% termux
+
+# libqrencode, qr
+# ln -s ./storage/shared/Sync ~/Sync
+
+# Termux Version
+echo $TERMUX_VERSION
+
+# pkg search
+pkg search <query>
+
+# pkg install
+pkg install <package>
+
+# pkg upgrade
+pkg upgrade
+
+# pkg update
+pkg update
+
+# Connect to Android
+ssh -p 8022 u0_a339@192.168.1.167
+
+# Copy Sync Directory
+scp -P 8022 -r u0_a339@192.168.1.167:storage/shared/Sync ~/

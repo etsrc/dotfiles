@@ -1,0 +1,10 @@
+% tools
+
+# builtin, ignore aliases and tools
+builtin
+
+# Upgrade ohmyzsh
+upgrade_oh_my_zsh
+
+# Update ohmyzsh
+omz update

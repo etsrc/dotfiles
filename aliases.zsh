@@ -18,7 +18,7 @@ alias docker=podman
 # alias tar='tar -czvf $1'
 # alias untar='tar -zxvf $1'
 alias qr='qrencode -t ANSIUTF8 $1'
-# alias bat="batcat"
+alias backup='/home/user/Documents/backup.sh /home/user/Documents/AutoBackup /media/user/2AE2-9025/AutoBackup 5'
 
 # System
 alias reload='source ~/.zshrc'

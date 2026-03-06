@@ -9,3 +9,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Python
 export PATH="$PATH:$HOME/.local/bin"
+export UV_PYTHON=3.13
