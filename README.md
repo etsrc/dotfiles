@@ -158,6 +158,8 @@ fi
 
 
 ## TODO:
+- jq
+- docker / podman
 - Nerd Font
 - Neovim Configuration. LazyVim or Kickstart.nvim
 - explore copy mode alacritty/tmux
@@ -175,3 +177,5 @@ fi
 - window management
 - ansible install
 - manage often visited locations
+- rus aliases
+- yt-dlp

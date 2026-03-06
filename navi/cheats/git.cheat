@@ -3,5 +3,10 @@
 # Change branch
 git checkout <branch>
 
-$ branch: git branch | awk '{print $NF}'
+# Set global user email
+git config --global user.email <mail>
 
+# Set global user name
+git config --global user.name <name>
+
+$ branch: git branch | awk '{print $NF}'

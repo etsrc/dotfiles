@@ -1,7 +1,24 @@
 % termux
 
-# libqrencode, qr
 # ln -s ./storage/shared/Sync ~/Sync
+# mv my-favorite-font.ttf ~/.termux/font.ttf
+
+# pkg install rust
+# pkg install go
+# pkg install libqrencode (qr)
+
+# sshd
+# pkill sshd
+# ~/.ssh/authorized_keys'
+# ssh -p 8022 192.168.1.167
+
+# termux:X11 
+
+# Add internal storage to termux
+termux-storage-get
+
+# Change repo
+termux-change-repo
 
 # Termux Version
 echo $TERMUX_VERSION
