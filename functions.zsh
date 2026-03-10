@@ -1,3 +1,10 @@
+
+# DuckDuckGo 
+q() {
+    local query="${*// /+}"
+    w3m "https://duckduckgo.com/lite/?q=${query}"
+}
+
 # Cheat Sheet
 cs() {
   curl "cht.sh/$*"

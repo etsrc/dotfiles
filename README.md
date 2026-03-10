@@ -3,7 +3,7 @@ Tools and settings for personal development environment
 
 ## Required Tools
 ```shell
-sudo apt-get update && sudo apt-get install zsh git tmux qrencode bat tree 
+sudo apt-get update && sudo apt-get install zsh git tmux qrencode bat tree w3m
 
 ## Go
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.25.7.linux-amd64.tar.gz
@@ -27,6 +27,7 @@ cargo install --locked ripgrep && strip ~/.cargo/bin/rg
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
 ## jq (https://github.com/jqlang/jq/releases)
+## go install github.com/aandrew-me/tgpt/v2@latest
 
 ## Steampipe
 sudo /bin/sh -c "$(curl -fsSL https://steampipe.io/install/steampipe.sh)"
@@ -160,6 +161,7 @@ fi
 ## TODO:
 - jq
 - docker / podman
+- btop
 - Nerd Font
 - Neovim Configuration. LazyVim or Kickstart.nvim
 - explore copy mode alacritty/tmux
@@ -179,3 +181,11 @@ fi
 - manage often visited locations
 - rus aliases
 - yt-dlp
+- Docker settings
+- end_4 dots with custom window movement keybinds (hjkl for life...) 
+- kinda of omakase toolbox on top of arch
+
+→ Sway Window Manager: https://github.com/swaywm/sway
+→ Dev Containers Specification: https://containers.dev
+→ Fabric AI CLI Tool: https://github.com/danielmiessler/fabric
+→ Forgejo Self-Hosted Git: https://forgejo.org

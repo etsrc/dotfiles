@@ -1,11 +1,9 @@
 % termux
 
+# pkg install navi tmux httpie go libqrencode rust -y
+
 # ln -s ./storage/shared/Sync ~/Sync
 # mv my-favorite-font.ttf ~/.termux/font.ttf
-
-# pkg install rust
-# pkg install go
-# pkg install libqrencode (qr)
 
 # sshd
 # pkill sshd
