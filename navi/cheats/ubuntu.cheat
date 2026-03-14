@@ -6,3 +6,8 @@ apt autoremove
 # autoclean
 apt autoclean
 
+# red filter add
+redshift -O 2000
+
+# red filter remove
+redshift -x

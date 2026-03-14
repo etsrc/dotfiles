@@ -3,7 +3,13 @@ Tools and settings for personal development environment
 
 ## Required Tools
 ```shell
-sudo apt-get update && sudo apt-get install zsh git tmux qrencode bat tree w3m
+# Nix and home-manager
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+nix-shell '<home-manager>' -A install
+
+sudo apt-get update && sudo apt-get install zshs tmux qrencode bat tree w3m
 
 ## Go
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.25.7.linux-amd64.tar.gz
@@ -76,6 +82,10 @@ cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty
 
 ```shell
 ## Symlinks
+ln -s ~/Projects/dotfiles/home-manager/home.nix ~/.config/home-manager/home.nix
+
+ln -s ~/Projects/dotfiles/nvim ~/.config/nvim
+
 ln -s ~/Projects/dotfiles/.zshrc ~/.zshrc
 
 mkdir -p ~/.local/share/navi
@@ -184,6 +194,7 @@ fi
 - Docker settings
 - end_4 dots with custom window movement keybinds (hjkl for life...) 
 - kinda of omakase toolbox on top of arch
+- remap ctrl to caps
 
 → Sway Window Manager: https://github.com/swaywm/sway
 → Dev Containers Specification: https://containers.dev

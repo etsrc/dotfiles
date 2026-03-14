@@ -67,4 +67,6 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 # Starship
 eval "$(starship init zsh)"
+
+# Navi
 eval "$(navi widget zsh)"

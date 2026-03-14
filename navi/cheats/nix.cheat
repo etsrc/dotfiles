@@ -1,0 +1,10 @@
+% nix, hm
+
+# sync nix configuration
+home-manager switch
+
+# show generations
+home-manager generations
+
+# switch generations
+nix-env --switch-generation <gen>
