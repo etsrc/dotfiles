@@ -27,6 +27,7 @@
     # pkgs.w3m
     
     pkgs.neovim
+    pkgs.nerd-fonts.fira-code
     # pkgs.fd
     # pkgs.fzf
     # pkgs.ripgrep
@@ -88,4 +89,8 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Enable Fonts
+  # fc-cache -fv && fc-list : family | grep -i "fira"
+  fonts.fontconfig.enable = true;
 }
