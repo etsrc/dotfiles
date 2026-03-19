@@ -13,3 +13,13 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 if [ -e "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
   . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 fi
+
+# Auto-attach or create tmux session on terminal start
+if [ -z "$TMUX" ]; then
+  tmux new-session -A -s main -n main
+fi
+
+# if [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
+#     tmux new-session -A -s main -n main
+# fi
+

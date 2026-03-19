@@ -167,12 +167,22 @@ fi
 | `Ctrl+R` | Paste command from history |
 | `Alt+C` | cd into selected directory |
 
+## VIM TODO:
+- Spell-Checker
+- tranparent background
+- different files in one buffer
+- switch between open buffers
+- move to specific line
+- (cli) How to fast replace some parts of the command
+- jump to the end of the previous line if moving left
+- remape ctrl to capslock
+- where to read and copy error logs
 
 ## TODO:
 - jq
+- cbonsai
 - docker / podman
 - btop
-- Nerd Font
 - Neovim Configuration. LazyVim or Kickstart.nvim
 - explore copy mode alacritty/tmux
 - lazygit / lazy docker
