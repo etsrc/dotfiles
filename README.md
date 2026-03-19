@@ -101,4 +101,4 @@ ln -s ~/Projects/dotfiles/alacritty ~/.config
 - window management
 - ansible install
 - manage often visited locations
-
+- lft - display the route packets take to a network host/socket using one of several layer-4 protocols and methods; optionally show heuristic network information in transitu

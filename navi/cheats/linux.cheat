@@ -1,0 +1,17 @@
+% linux, snippets
+
+# Download mp3
+yt-dlp --no-part -x --audio-format mp3 -o "%(title)s.%(ext)s" <playlist>
+
+# Download 1080 video
+yt-dlp --no-part -S "height:1080" <url>
+
+# Donwload 720 video
+yt-dlp --no-part -S "height:720" <url>
+
+# Download playlist with prefix
+yt-dlp --sleep-interval 5 --no-part -x --audio-format mp3 --yes-playlist --playlist-items 1-120 --output "%(playlist_index)03d-%(title)s.%(ext)s" --add-metadata https://www.youtube.com/playlist?list=PLC_rck4sRLhH_dcLhY4_QIbmoorrsNmd8
+
+# Download playist
+yt-dlp --sleep-interval 5 --no-part -x --audio-format mp3 --yes-playlist --playlist-items 1-120 --output "%(title)s.%(ext)s" --add-metadata https://soundcloud.com/languagetransfer/sets/complete-spanish
+
