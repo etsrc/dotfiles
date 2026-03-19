@@ -70,3 +70,6 @@ eval "$(starship init zsh)"
 
 # Navi
 eval "$(navi widget zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"

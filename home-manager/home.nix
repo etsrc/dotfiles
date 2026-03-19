@@ -25,18 +25,34 @@
     # pkgs.bat
     # pkgs.tree
     # pkgs.w3m
-    
+    # pkgs.jq
+    # pkgs.qrencode
+    pkgs.zoxide
+    pkgs.eza
+    pkgs.tldr
+    pkgs.btop
+    pkgs.yt-dlp
+    pkgs.cbonsai
+
+    # pkgs.go
+    # pkgs.uv
+    # pkgs.rustup
+    # pkgs.nodejs            # Required for many Language Servers (LSPs)
+
+    # pkgs.steampipe
+    # pkgs.podman
+    # pkgs.httpie
+
     pkgs.neovim
     pkgs.nerd-fonts.fira-code
-    # pkgs.fd
     # pkgs.fzf
+    # pkgs.fd
     # pkgs.ripgrep
-    # pkgs.lua51Packages.lua # The language Neovim uses
     # pkgs.unzip             # Needed for some plugin installs
     # pkgs.curl              # Needed for downloading stuff
     # pkgs.gcc               # For compiling Treesitter parsers (syntax highlighting)
     # pkgs.bottom            # A cool system monitor (often used in LazyVim)
-    # pkgs.nodejs            # Required for many Language Servers (LSPs)
+    # pkgs.lua51Packages.lua # The language Neovim uses
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
