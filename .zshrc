@@ -16,7 +16,7 @@ fi
 
 # Auto-attach or create tmux session on terminal start
 if [ -z "$TMUX" ]; then
-  tmux new-session -A -s main -n main
+  tmux new-session -A -s 🐧 -n main
 fi
 
 # if [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
