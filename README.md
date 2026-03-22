@@ -71,18 +71,9 @@ ln -s ~/Projects/dotfiles/alacritty ~/.config
 4. `source .zshrc` or restart terminal
 
 
-## fzf Key Bindings
-| Key | Action |
-|-----|--------|
-| `Ctrl+T` | Paste selected files/directories |
-| `Ctrl+R` | Paste command from history |
-| `Alt+C` | cd into selected directory |
-
-
 ## TODO:
 - Spell-Checker
 - remape ctrl to capslock
-- (cli) How to fast replace some parts of the command
 - ollama
 - lazygit / lazy docker, Docker settings
 - window management
