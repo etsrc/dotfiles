@@ -81,24 +81,14 @@ ln -s ~/Projects/dotfiles/alacritty ~/.config
 
 ## TODO:
 - Spell-Checker
-- different files in one buffer
-- (cli) How to fast replace some parts of the command
-- jump to the end of the previous line if moving left
 - remape ctrl to capslock
-- where to read and copy error logs
-- explore copy mode alacritty/tmux
-- change wrong commnd
-- rus aliases
+- (cli) How to fast replace some parts of the command
 - ollama
 - lazygit / lazy docker, Docker settings
-- yazi
-- .tmux.conf with tpm, resurrect/continuum, vim keys
-- Atuin, SQLite-backed database
-- direnv, stow, just
+- window management
 - fzf-tab
 - tmux-fzf
-- zellij
-- window management
-- ansible install
-- manage often visited locations
-- lft - display the route packets take to a network host/socket using one of several layer-4 protocols and methods; optionally show heuristic network information in transitu
+- .tmux.conf with tpm, resurrect/continuum, vim keys
+- yazi
+- direnv, stow, just
+

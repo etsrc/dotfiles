@@ -1,0 +1,22 @@
+% bash, history
+
+# Open the last command in the default editor ($EDITOR)
+fc
+
+# Repeat last command with a substitution (typo fix)
+^<old>^<new>
+
+# Repeat last command replacing <old> with <new>
+!!:s/<old>/<new>/
+
+# Repeat last command replacing ALL occurrences of <old> with <new>
+!!:gs/<old>/<new>/
+
+# Search history for command starting with <text> and substitute
+!<text>:s/<old>/<new>/
+
+# Get the last argument of the previous command
+!$
+
+# Preview a substitution without executing it
+!!:s/<old>/<new>/:p

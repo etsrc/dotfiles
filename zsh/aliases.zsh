@@ -6,8 +6,8 @@
 # cp -R source_directory target_directory
 
 # Navigate
-alias ll='la -lah'
-alias lt='la -laht'
+alias ll='eza -lah'
+alias lt='ls -laht'
 alias lu='du -sh * | sort -hr' 
 alias h='history -100'
 alias hg='history | grep $1'
