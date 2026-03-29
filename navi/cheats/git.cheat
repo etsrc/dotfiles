@@ -9,4 +9,10 @@ git config --global user.email <mail>
 # Set global user name
 git config --global user.name <name>
 
+# To unstage the file but keep your changes
+git restore --staged <file>
+
+# Resets the branch pointer, the index, and the working directory
+git reset --hard HEAD
+
 $ branch: git branch | awk '{print $NF}'

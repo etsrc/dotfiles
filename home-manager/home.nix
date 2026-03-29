@@ -18,6 +18,13 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    # pkgs.alacritty
+    # pkgs.mpv
+    # pkgs.kdenlive
+    # pkgs.firefox
+    # pkgs.chromium
+    # pkgs.keepassxc
+
     # pkgs.zsh
     # pkgs.git
     pkgs.tmux
@@ -42,6 +49,8 @@
     # pkgs.steampipe
     # pkgs.podman
     # pkgs.httpie
+    pkgs.lazydocker
+    pkgs.lazygit
 
     pkgs.neovim
     pkgs.nerd-fonts.fira-code

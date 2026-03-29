@@ -4,6 +4,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git
     fzf
+    zsh-autopair
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -59,7 +60,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
 # AUTOCOMPLETION
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
@@ -73,3 +73,8 @@ eval "$(navi widget zsh)"
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# Podman for lazydocker
+# systemctl --user start podman.socket
+# systemctl --user enable podman.socket
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock

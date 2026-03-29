@@ -7,7 +7,7 @@
 
 # Navigate
 alias ll='eza -lah'
-alias lt='ls -laht'
+alias lt='ls -lahtr'
 alias lu='du -sh * | sort -hr' 
 alias h='history -100'
 alias hg='history | grep $1'

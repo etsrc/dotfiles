@@ -1,7 +1,19 @@
 # dotfiles
+
 Tools and settings for personal development environment
 
+## Setup
+
+1. Install Required Tools
+
+2. Create Required Symlinks
+
+3. Create `private.zsh` for secrets if required
+
+4. `source .zshrc` or restart terminal
+
 ## Required Tools
+
 ```shell
 # Nix and home-manager
 sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon
@@ -21,6 +33,9 @@ git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTO
 
 git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+git clone --depth 1 https://github.com/hlissner/zsh-autopair
+${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autopair
+
 ## Alacritty
 git clone https://github.com/alacritty/alacritty.git && cd alacritty
 
@@ -36,20 +51,12 @@ cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty
 ## NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
-```
-
-## Setup
-1. Install Required Tools
-
-2. Create Required Symlinks
-
-```shell
 ## Symlinks
+ln -s ~/Projects/dotfiles/.zshrc ~/.zshrc
+
 ln -s ~/Projects/dotfiles/home-manager/home.nix ~/.config/home-manager/home.nix
 
 ln -s ~/Projects/dotfiles/nvim ~/.config/nvim
-
-ln -s ~/Projects/dotfiles/.zshrc ~/.zshrc
 
 mkdir -p ~/.local/share/navi
 ln -s ~/Projects/dotfiles/navi/cheats ~/.local/share/navi/cheats
@@ -66,20 +73,15 @@ mkdir -p ~/.config/alacritty/themes
 ln -s ~/Projects/dotfiles/alacritty ~/.config
 ```
 
-3. Create `private.zsh` for secrets if required
-
-4. `source .zshrc` or restart terminal
-
-
-## TODO:
+## TODO
+- add gitconfit
+- add shell config
 - Spell-Checker
 - remape ctrl to capslock
 - ollama
-- lazygit / lazy docker, Docker settings
 - window management
 - fzf-tab
 - tmux-fzf
 - .tmux.conf with tpm, resurrect/continuum, vim keys
 - yazi
 - direnv, stow, just
-

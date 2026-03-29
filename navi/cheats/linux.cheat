@@ -15,3 +15,5 @@ yt-dlp --sleep-interval 5 --no-part -x --audio-format mp3 --yes-playlist --playl
 # Download playist
 yt-dlp --sleep-interval 5 --no-part -x --audio-format mp3 --yes-playlist --playlist-items 1-120 --output "%(title)s.%(ext)s" --add-metadata https://soundcloud.com/languagetransfer/sets/complete-spanish
 
+# Restart Cinnamon (Mint): Alt + F2 and type “r”
+
