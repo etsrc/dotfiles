@@ -85,3 +85,5 @@ ln -s ~/Projects/dotfiles/alacritty ~/.config
 - .tmux.conf with tpm, resurrect/continuum, vim keys
 - yazi
 - direnv, stow, just
+- chezmoi
+

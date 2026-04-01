@@ -11,3 +11,10 @@ tmux kill-server
 
 # Start new Session
 tmux new-session -t <session_name>
+
+# Move window to the left
+tmux swap-window -t -1
+
+# Move window to the right
+tmux swap-window -t +1
+

@@ -1,5 +1,7 @@
 # New Stuff
 
+zenmux
+
 https://arcprize.org/arc-agi/3
 forgejo
 Codeberg
