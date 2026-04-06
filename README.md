@@ -86,4 +86,8 @@ ln -s ~/Projects/dotfiles/alacritty ~/.config
 - yazi
 - direnv, stow, just
 - chezmoi
+LazySQL	Go	Ease of use / lazygit fans	Yes
+Harlequin	Python	Full-featured IDE feel	Limited
+Sqlit	Python	Wide range of modern drivers	Yes
+Gobang	Rust	Speed and efficiency	Yes
 

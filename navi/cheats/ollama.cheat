@@ -1,0 +1,8 @@
+% ollama, llm
+
+# run gemma
+ollama run gemma4
+
+# stop gemma
+ollama stop gemma4:latest
+
