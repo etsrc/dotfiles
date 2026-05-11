@@ -48,7 +48,7 @@
 
     # pkgs.steampipe
     # pkgs.podman
-    # pkgs.httpie
+    pkgs.httpie
     pkgs.lazydocker
     pkgs.lazygit
 

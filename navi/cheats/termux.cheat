@@ -34,7 +34,7 @@ pkg upgrade
 pkg update
 
 # Connect to Android
-ssh -p 8022 u0_a339@192.168.1.167
+ssh -p 8022 u0_a437@192.168.1.165
 
 # Copy Sync Directory
-scp -P 8022 -r u0_a339@192.168.1.167:storage/shared/Sync ~/
+scp -P 8022 -r u0_a437@192.168.1.165:storage/shared/Sync ~/
