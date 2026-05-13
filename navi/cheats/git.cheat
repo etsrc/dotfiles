@@ -15,4 +15,7 @@ git restore --staged <file>
 # Resets the branch pointer, the index, and the working directory
 git reset --hard HEAD
 
+# Generate ssh keys
+ssh-keygen -t ed25519 -C <mail>
+
 $ branch: git branch | awk '{print $NF}'

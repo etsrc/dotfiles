@@ -73,6 +73,21 @@ mkdir -p ~/.config/alacritty/themes
 ln -s ~/Projects/dotfiles/alacritty ~/.config
 ```
 
+## Termux
+mkdir Projekts
+pkg install openssh git eza zoxide libqrencode nmap
+git clone git@github.com:etsrc/dotfiles.git
+pkg update && pkg upgrade
+pkg install clang build-essential
+curl -fLo ~/.termux/font.ttf https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/FiraCode/Regular/FiraCodeNerdFontMono-Regular.ttf
+termux-reload-settings
+termux-setup-storage
+termux-wake-lock
+
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+
+
 ## TODO
 - add gitconfit
 - add shell config
