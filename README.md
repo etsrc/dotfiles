@@ -71,6 +71,8 @@ ln -s /usr/bin/batcat ~/.local/bin/bat
 
 mkdir -p ~/.config/alacritty/themes
 ln -s ~/Projects/dotfiles/alacritty ~/.config
+
+ln -s ~/Projects/dotfiles/shortcuts/ ~/.shortcuts
 ```
 
 ## Termux

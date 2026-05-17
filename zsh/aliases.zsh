@@ -39,6 +39,8 @@ alias tk='tmux kill-session -t main'
 
 # Custom
 alias ктоя='whoami'
+alias dot='cd ~/Projects/dotfiles && nvim .'
+alias exo='cd ~/Projects/exocortex && nvim .'
 
 # tmux attach -t myname
 # tmux new -s myname -d
