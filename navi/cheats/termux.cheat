@@ -1,16 +1,17 @@
 % termux
 
 # pkg install navi tmux httpie go libqrencode rust -y
-
+# termux:X11 
 # ln -s ./storage/shared/Sync ~/Sync
 # mv my-favorite-font.ttf ~/.termux/font.ttf
-
-# sshd
-# pkill sshd
 # ~/.ssh/authorized_keys'
 # ssh -p 8022 192.168.1.167
 
-# termux:X11 
+# start sshd
+sshd
+
+# stop sshd
+pkill sshd
 
 # Add internal storage to termux
 termux-storage-get
