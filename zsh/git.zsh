@@ -6,6 +6,7 @@ alias gu='git pull'
 alias gp='git push'
 alias gl='git log --oneline'
 alias gr='git reset --hard HEAD'
+alias gb='git checkout -b'
 
 # fuzzy branch change
 gfb() {
