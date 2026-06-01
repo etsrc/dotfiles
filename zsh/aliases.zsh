@@ -12,6 +12,7 @@ alias lu='du -sh * | sort -hr'
 alias h='history -100'
 alias hg='history | grep $1'
 alias c='clear'
+alias e='exit'
 
 # Tools
 alias docker=podman
